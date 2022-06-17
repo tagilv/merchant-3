@@ -7,5 +7,5 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "creating seed"
-testwarehouse = Warehouse.new(name: "testwarehouse", location: "London")
+testwarehouse = Warehouse.create(name: "testwarehouse", location: "London")
 puts "seed created"
