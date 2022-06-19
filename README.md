@@ -1,3 +1,31 @@
+# README
+
+Name: Merchant-app
+
+Description
+* With this application you can manage manage inventory across different warehouses. You can add, edit, delete and view products as well as assigning the products to different warehouses. You can also view product specific information such as price and product description on the individual show pages of the products.
+
+Usage
+1. The root/home screen will take you to the warehouses index page. From this page you can create new warehouses, view and edit the warehouses and go to the page with all products.
+3. To create a new product and assign it to a Warehouse, go to Create a new Product and create the product and select warehouse
+4. If you select "Go to all Warehouses" at the bottom of the screen you will get to the list of warehouses where you can see products listed per warehouse.
+
+Roadmap
+* One current limitation is that you cannot create several units of the same product in bulk and assign to different warehouses. One idea to address this would be to create a third table just for inventory with product id, warehouse id and quantity as columns.
+
+System Testing and Unit Testing
+- I have used rail’s Minitest to perform one System Test using the Capybara gem. The fixtures helper was used.
+- I have set up one unit test where I test the Warehouse model (warehouse_test.rb)
+- Ideally more tests should be added.
+
+Versions
+- Ruby version: '3.0.3'
+- Database: sqlite3', '~> 1.4'
+
+Please Note
+- If the replit server does not start, please try and run the following command in the console and refresh: run`gem install bundler -v '~> 2.3'`
+
+
 # Rails on Replit
 
 This is a template to get you started with Rails on Replit. It's ready to go so you can just hit run and start coding!
