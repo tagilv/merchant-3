@@ -1,11 +1,16 @@
 <div class="container">
-  <h3><%= @warehouse.name %> in <%= @warehouse.location %>:</h3>
-
+  <h3>Prodcuts found in <%= @warehouse.name %> in <%= @warehouse.location %>:</h3>
+    <ol>
+      <% @warehouse.products.each do |product|%>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end%>
+    </ol>
   <hr>
     <ul>
+      <li><%= link_to "Create a new Product", new_product_path %></li>
       <li><%= link_to "Go to all Warehoues", warehouses_path %></li>
       <li><%= link_to "Edit this Warehouse", edit_warehouse_path(@warehouse) %></li>
-      <li><%= link_to "Delete this Warehouse", warehouse_path(@warehouse), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+      <li><%= link_to "Delete this Warehouse", warehouse_path(@warehouse), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this Warehouse?"} %></li>
     </ul>
   <hr>
 </div>
