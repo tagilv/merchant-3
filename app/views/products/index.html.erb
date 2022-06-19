@@ -1,0 +1,9 @@
+  <div class="container">
+    <h3> List of all Products/inventory:</h3>
+
+    <ol>
+      <% @products.each do | product | %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+    </ol>
+  </div>
