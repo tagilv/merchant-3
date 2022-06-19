@@ -12,9 +12,7 @@ class WarehousesController < ApplicationController
   end
 
   def create
-    @warehouse = Warehouse.new(warehouse_params)
-    @warehouse.save
-
+    @warehouse = Warehouse.create(warehouse_params)
     redirect_to warehouse_path(@warehouse)
   end
 
