@@ -1,10 +1,10 @@
 class WarehousesController < ApplicationController
+  before_action :find_warehouse, only: [:show, :edit, :update, :destroy]
   def index
     @warehouses = Warehouse.all
   end
 
   def show
-    @warehouse = Warehouse.find(params[:id])
   end
 
   def new
@@ -19,25 +19,26 @@ class WarehousesController < ApplicationController
   end
 
   def edit
-    @warehouse = Warehouse.find(params[:id])
   end
 
   def update
-    @warehouse = Warehouse.find(params[:id])
     @warehouse.update(warehouse_params)
     redirect_to warehouse_path(@warehouse)
   end
 
   def destroy
-    @warehouse = Warehouse.find(params[:id])
     @warehouse.destroy
-    reditect_to warehouses_path
-  end
 
+    redirect_to warehouses_path, status: :see_other
+  end
 
   private
   def warehouse_params
     params.require(:warehouse).permit(:name, :location)
+  end
+
+  def find_warehouse
+    @warehouse = Warehouse.find(params[:id])
   end
 
 end
