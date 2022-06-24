@@ -2,6 +2,15 @@
 
 Name: Merchant-app
 
+Please Note: In order to start this application on replit you will need to run the follwoing commands in the following order:
+1. Press Run
+2. Enter `gem install bundler -v '~> 2.3'
+3. Refresh the page
+4. Enter run`gem install bundler -v '~> 2.3'
+5. Refresh the page
+6. Press Run
+7. Application is live
+
 Description
 * With this application you can manage manage inventory across different warehouses. You can add, edit, delete and view products as well as assigning the products to different warehouses. You can also view product specific information such as price and product description on the individual show pages of the products.
 
@@ -21,10 +30,6 @@ System Testing and Unit Testing
 Versions
 - Ruby version: '3.0.3'
 - Database: sqlite3', '~> 1.4'
-
-Please Note
-- If the replit server does not start, please try and run the following command in the console and refresh: run`gem install bundler -v '~> 2.3'`
-
 
 # Rails on Replit
 
